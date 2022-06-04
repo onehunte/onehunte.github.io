@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    display: grid;
+    width: 1440px;
+    height: 600px;
+    border-top: 15px solid #333;
+    border-left: 15px solid #333;
+    border-right: 15px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    background-image: url(/img/background.png);
+    background-repeat: no-repeat;
+}
+.terreno{
+    width: 1440px;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-left: 15px solid #333;
+    border-right: 15px solid #333;
+    border-bottom: 15px solid #333 ;
+}
+
+.clouds{
+    width: 600px;
+    animation: clouds-animation 20s infinite linear;
+    position: absolute;
+}
+.arvore{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: arvore-animation 1.5s infinite linear;
+    
+}
+
+.caveira{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.pular {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes arvore-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0px;
+    }
+
+    40%{
+        bottom: 300px;
+    }
+
+    50%{
+        bottom: 300px;
+    }
+    
+    60%{
+        bottom: 300px;
+    }
+
+    100%{
+        bottom: 0px;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right:100% ;
+    }
+}
